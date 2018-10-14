@@ -88,14 +88,14 @@ App = {
             return adoptionInstance.adopt(petId, {from: account});
         })
         .then(function(result) {
-            alert('Adoption success!');
+            alert('Successfully Claimed!');
             // although it succeed, it still takes time until
             // getAdopters() return updated list of adopters
             return App.markAdopted();
         })
         .catch(function(err) {
             // enable button again on error
-            $(this).text('Adopt').removeAttr('disabled');
+            $(this).text('Claim').removeAttr('disabled');
             console.log(err.message);
         });
     });
@@ -110,7 +110,7 @@ App = {
         // disable adopted pets button
         adopters.forEach(function(adopter, i) {
             if (adopter !== '0x0000000000000000000000000000000000000000') {
-                $('.panel-pet').eq(i).find('button').text('Adopted').attr('disabled', true);
+                $('.panel-pet').eq(i).find('button').text('Claimed').attr('disabled', true);
             }
         });
         console.log('Status updated on ' + Date.now());
