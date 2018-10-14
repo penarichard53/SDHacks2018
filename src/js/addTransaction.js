@@ -1,9 +1,11 @@
-document.body.onload = addElement;
+document.body.onload = addTransaction;
 
-function addElement (ID, condition, weaponType, currentOwner) { 
-  // create a new div element 
-  var newDiv = document.getElementsByTagName("tbody")[0]; 
-  // and give it some content 
+function addTransaction (ID, condition, weaponType, currentOwner, price) {
+  console.log("addElement is called")
+
+  // create a new div element
+  var newDiv = document.getElementsByTagName("tbody")[0];
+  // and give it some content
   var newTr = document.createElement("tr");
 
   var newTd1 = document.createElement("th");
@@ -23,17 +25,17 @@ function addElement (ID, condition, weaponType, currentOwner) {
   newTd4.appendChild(newContent4);
 
   var newTd5 = document.createElement("th");
-  var newContent5 = document.createTextNode(currentOwner);
+  var newContent5 = document.createTextNode(price);
   newTd5.appendChild(newContent5);
 
   // add the text node to the newly created div
-  newTr.appendChild(newTd1); 
+  newTr.appendChild(newTd1);
   newTr.appendChild(newTd2);
   newTr.appendChild(newTd3);
   newTr.appendChild(newTd4);
   newTr.appendChild(newTd5);
 
 
-  // add the newly created element and its content into the DOM 
-  newDiv.appendChild(newTr); 
+  // add the newly created element and its content into the DOM
+  newDiv.appendChild(newTr);
 }
