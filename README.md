@@ -15,7 +15,7 @@ Clone the repo to your directory and run `$ npm install` - this will install all
 
 ## Deployment
 Open a new terminal and turn on the virtual ethereum network with `$ ganache-cli` 
-The `ganache-cli` will give you a 12 work token to be input into meta mask, once the connection is made with the private server, call the run script with `$ npm run`
+The `ganache-cli` will give you a 12 word token to be input into meta mask, once the connection is made with the private server, call the run script with `$ npm run`
 
 
 ## Inspiration
